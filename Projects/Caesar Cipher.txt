@@ -1,0 +1,7 @@
+Sample Input & Output 
+
+Input:  QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD
+shift Key: 3
+
+Output: THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
+

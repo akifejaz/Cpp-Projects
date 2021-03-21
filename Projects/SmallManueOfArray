@@ -1,0 +1,165 @@
+
+
+
+#include<iostream>
+using namespace std;
+
+int main(){
+
+	int response_No;
+	int test_array [] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20} ;
+	int test_array1[20];
+	
+	cout <<"Initially the Array is \n";
+	for (int i=0; i<=19 ; i++)  
+			cout<<"  ";
+		    cout<<test_array[i];
+	
+		}
+	
+	   cout <<"\nSelect a Number\n\t0 _ Initialize\n\t1 _ Squre\n\t2 _ Halve\n\t3 _ Acumulate\n\t4 _ Transpose\n\t5 _ Shift\n\t6 _ Reverse\n\tOr any other Integer to exit \n";
+	   
+	
+	while (true){
+		
+		cout <<"\nSelect a Number\nOr any other 'integer' key to exit \n";
+		cin >>response_No;
+		
+		   
+	if ( response_No <=6 )
+		{
+	  
+	   if (response_No == 0)
+	   {
+	   	cout << "You have selected 0 \nEnter Maximum 20 Numbers to initialize the array \n";
+	   	
+	   		for (int i=0; i<20; i++)
+	   		{
+	   			cin>>test_array[i];
+		    }
+		      
+		cout << "Now the Array is \n";
+		   
+			for (int i=0; i<20; i++)
+			{
+				cout <<" " <<test_array[i];
+	     	}
+	     	
+	   }
+	   
+	   
+	    else if (response_No == 1)
+	   {
+	   		cout << "you have selected 1 \n ";
+	   		
+	   		for (int i=0; i<20; i++)
+	   			{
+	   				test_array[i] = test_array[i] * test_array[i] ;
+			    }
+			    
+			cout << "Now the Array is \n";
+			
+			for (int i=0; i<20; i++)
+			{
+			 	cout << "  "<<test_array[i];
+			}
+	   	
+	   }
+	    else if (response_No == 2)
+	   {
+	   		cout << "you have selected 2 \n\n";
+	   		
+	   		for (int i=0; i<20; i++)
+	   			{
+	   				test_array[i] = test_array[i] /2;
+			    }
+			    
+			cout << "Now the Array is \n";
+			
+			for (int i=0; i<20; i++)
+			{
+			 	cout << "  "<<test_array[i];
+			}
+	   }
+	    else if (response_No == 3)  // add the current and previous values !
+	   {
+	   		cout << "you have selected 3 \n";
+	   		
+	   		for (int i=1; i<20; i++)
+	   			{
+	   				test_array[i] = test_array[i] + test_array[i-1];
+			    }
+			    
+			cout << "Now the Array is \n";
+			
+			for (int i=0; i<20; i++)
+			{
+			 cout << "  "<<test_array[i];
+			}
+	   }
+	    else  if (response_No == 4) // shift individual two number position eg, Before ( 2 , 3 ) after ( 3, 2 )
+	   {
+	   		cout << "you have selected 4 \n";
+	   		
+	   		for (int i=0; i<20; i++)
+			{
+					if ( test_array[i] % 2==0 )
+	   			{
+	   				test_array1[i] = test_array[i+1] ;
+	   			
+			    }
+			    
+			else
+	   			{
+	   				test_array1[i] = test_array[i-1] ;
+	   			
+			    }
+	   	
+			 cout << "  "<<test_array1[i];
+			}
+	   	
+	   }
+	    else if (response_No == 5)
+	   {
+	   		cout << "you have selected 5 \n";
+	   		
+	   		for (int i=0; i<20; i++)
+	   			{
+	   			
+	   				test_array1[i] = test_array[i+1];
+			    }
+			cout << "Now the Array is \n";
+			 
+			for (int i=0; i<20; i++)
+			{
+				 cout << "  "<<test_array1[i];
+			}
+	   }
+	   
+	    else  if (response_No == 6)
+	   {
+	   	cout << "you have selected 6 \n";
+	   		
+	   		for (int i=0,y=0; i<20; i++)
+	   		{
+	   		
+	   			test_array[i] = test_array[i];
+			   }
+			cout << "Now the Array is \n";
+			 
+			for (int i = 19; i>=0 ; i--)
+			{
+			 cout << "  "<<test_array[i];
+			}
+	   }
+	    
+	 }
+	 else
+	 {
+	 	cout<<"<<Invalid Key>> Kindly Enter Number from 1 to 6 ";
+	 	exit (0) ;
+	 }
+	 
+	}
+		 return 0;
+}

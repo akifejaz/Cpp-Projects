@@ -1,0 +1,4 @@
+In this program a simple manue using C++ has been made. It allow you to change array, double array, transpose , reverse the elements of array etc.
+It is simple program to build understanding in arrays.
+
+Feel free to mention or contact if you find any error or need to understand something.

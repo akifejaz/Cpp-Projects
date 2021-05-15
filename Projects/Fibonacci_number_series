@@ -1,0 +1,29 @@
+
+#include <stdlib.h>
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+    int n, t1 = 0, t2 = 1, nextTerm = 0;
+
+    //Enter Numbers you want of type Fibonacci number Series 
+    cout << "Enter the number of terms: ";
+    cin >> n;
+
+    cout << "Fibonacci Series : [ ";
+
+    for (int i = 1; i <= n; ++i) {
+        
+        nextTerm = t1 + t2;  // 1  -->> 1+1 -->> 
+        t1 = t2;             // 1
+        t2 = nextTerm;      // 1
+        
+        cout << nextTerm <<" ";
+    }
+    
+    cout<<" ]";
+    
+    return 0;
+}
